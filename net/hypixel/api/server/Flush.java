@@ -11,14 +11,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.net.Socket;
 
 
-public class CostomeNameBlock extends JavaPlugin {
+public class Flush extends JavaPlugin {
 
     /**
-     * @Hypixel {Link} onPlayer - Event @{Link}
+     * @Hypixel {Link} onFlush - Event @{Link}
      */
 
-    public boolean onPlayer(CommandSender sender, Command cmd, Player player, Socket socket) {
-      /** @Hypixel {Link} onPlayer */
+    public boolean onFlush(CommandSender sender, Command cmd, Player player, Socket socket) {
+      /** @Hypixel {Link} Flush */
         if (player.isOnline() == false) {
             player.chat("Hypixel: Player " + player.getName() + " Has left the lobby!");
         }

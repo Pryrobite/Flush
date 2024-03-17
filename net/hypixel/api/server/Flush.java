@@ -1,32 +1,21 @@
 package net.hypixel.api.player;
 
-import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
-import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.net.Socket;
-
-
 public class Flush extends JavaPlugin {
-
     /**
      * @Hypixel {Link} onFlush - Event @{Link}
      */
-
     public boolean onFlush(CommandSender sender, Command cmd, Player player, Socket socket) {
       /** @Hypixel {Link} Flush */
         if (player.isOnline() == false) {
             player.chat("Hypixel: Player " + player.getName() + " Has left the lobby!");
         }
         if (player.isOnline() == true) {
-
-
             if (player.performCommand("/Flush")) {
-
                 socket.isClosed();
                 socket.getInetAddress().isMCGlobal();
             }
@@ -37,7 +26,6 @@ public class Flush extends JavaPlugin {
     public void onEnable() {
         this.onEnable();
     }
-
     public void onDisable() {
         /** @Hypixel {link} */
         this.onDisable();
